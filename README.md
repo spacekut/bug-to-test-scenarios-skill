@@ -10,6 +10,8 @@ Copy `.claude/skills/bug-to-test-scenarios/` into a project's `.claude/skills/` 
 
 ## Quick start
 
+Before a first real run, go through [`PREP-CHECKLIST.md`](PREP-CHECKLIST.md). To show someone the skill in a few minutes, follow [`DEMO.md`](DEMO.md).
+
 1. **Have the bug ready.** Description, steps to reproduce, expected and actual behaviour, environment, and every comment. Add the fix or pull request, and any spec or acceptance criteria, if you have them. Paste the text, save it to a file, or use a tracker tool Claude can reach.
 2. **Check permission.** If the bug belongs to an employer or client, make sure you're allowed to use it this way, run the skill inside their tools, and keep their ticket text and data out of personal repos.
 3. **Ask**: "Turn BUG-123 into test scenarios" or "What should I test to verify this fix?"
