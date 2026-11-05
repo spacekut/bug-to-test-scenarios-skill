@@ -51,8 +51,8 @@ Then add:
 
 - **Bug in one line** and the trigger conditions, marked stated or suspected.
 - **Traceability**: which part of the bug report each scenario comes from. Never cite a fix, pull request or log you did not read as a source. If a row rests on something only described in a comment, say "per the comment".
-- **Derived values**: any expected value you worked out yourself (for example by arithmetic from a stated rule) and the rule it came from. Mark each as derived and unconfirmed, and list it under Open questions unless the ticket states the value.
-- **Open questions**: the gaps from step 4.
+- **Derived values**: any expected value you worked out yourself (for example by arithmetic from a stated rule) and the rule it came from. Mark each as derived and unconfirmed in its row and in this list, and include it in the "Confirm derived values" line under Open questions unless the ticket states the value.
+- **Open questions**: the gaps from step 4, plus one line for the derived values: `Confirm derived values: <each value and the rule it came from>`. This line is required whenever there are any derived values, even though they also have their own heading.
 - **Cut**: scenarios considered and dropped, with the reason.
 - **Automation candidates**: scenarios worth turning into automated tests, and why.
 
