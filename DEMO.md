@@ -71,7 +71,7 @@ In a normal interactive session the skill shows the table and waits for your rev
   | 10% applied twice gives 16.20, not 16.00 | Raises the mismatch as an open question for the dev. (This came from the made-up numbers, not a planted trap, but it is a real check.) |
 
 - **Derived values**: any expected number the skill worked out itself (for example 19.00 for a 5% discount on 20.00) is labelled derived and unconfirmed, and appears in a `Confirm derived values:` line under open questions.
-- **The closing line**: nothing shown proves the bug is fixed, because nothing was run.
+- **The closing line**: it says nothing has been run, so every row is `Not run`, and asks you to review the table and answer the open questions before treating it as final. The exact wording varies from run to run. Most runs also say outright that nothing shown proves the bug is fixed, but not every run does, so don't promise that sentence in a demo.
 
 ## 4. Be honest about the limits
 
