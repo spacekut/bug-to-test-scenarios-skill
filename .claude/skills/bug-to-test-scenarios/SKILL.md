@@ -30,7 +30,7 @@ Turns one bug report into test scenarios a tester can run. The goal is to prove 
 | Reproduce | Follow the reported steps and show the bug on a build without the fix. | Always include. Use the reporter's own data where safe. |
 | Verify the fix | The same steps on the fixed build must give the expected result. | Always include. State the exact build or version. |
 | Variants | Same cause, different input: boundary values, empty and maximum, other roles, other data types, other entry points (UI, API, import, scheduled job). | Only variants the cause makes plausible. |
-| Neighbours | Nearby behaviour that shares the code path or data, found from the fix or the feature's structure. | Keep it to what the fix actually touches. Without the fix, mark as assumed. |
+| Neighbours | Nearby behaviour that shares the code path or data, found from the fix or the feature's structure. | Keep it to what the fix actually touches. If the fix or pull request was not read, start the name with `Neighbour (assumed):` and say in Traceability that it is a guess from the feature's structure. |
 | Does not break | The normal case still works after the fix. | One or two scenarios, not a full regression pack. |
 | Non-functional | Performance, accessibility, data loss or security, only if the bug or the fix points there. | Say why it applies. |
 
@@ -50,7 +50,8 @@ Use exactly these three columns, one row per scenario, with no other columns.
 Then add:
 
 - **Bug in one line** and the trigger conditions, marked stated or suspected.
-- **Traceability**: which part of the bug report each scenario comes from.
+- **Traceability**: which part of the bug report each scenario comes from. Never cite a fix, pull request or log you did not read as a source. If a row rests on something only described in a comment, say "per the comment".
+- **Derived values**: any expected value you worked out yourself (for example by arithmetic from a stated rule) and the rule it came from. Mark each as derived and unconfirmed, and list it under Open questions unless the ticket states the value.
 - **Open questions**: the gaps from step 4.
 - **Cut**: scenarios considered and dropped, with the reason.
 - **Automation candidates**: scenarios worth turning into automated tests, and why.
@@ -67,6 +68,8 @@ Start every Test Result with one of `Pass`, `Fail`, `Blocked` or `Not run`, then
 ## Guardrails
 
 - Do not invent steps, data, error messages or expected behaviour. Mark gaps.
+- Do not present a derived value as a requirement. Label it derived, and do not let a derived value decide pass or fail without confirmation.
+- Do not cite a source you did not read.
 - Do not call a bug "fixed", "verified" or "regression-free" unless the scenarios were run on the fixed build.
 - Do not assume the reporter's diagnosis is right. Test the observable behaviour.
 - Do not change the expected behaviour to match what the build does. If the build and the ticket disagree, report the disagreement.

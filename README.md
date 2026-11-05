@@ -29,6 +29,8 @@ Not yet tried on a real bug. Treat the first run on one as a trial.
 
 Trial run (2026-11-05): one non-interactive run on a made-up bug (a discount-code total that comes out wrong), with five comments that included a disagreement about the expected total, two unverified claims, and a claimed fix that the run could not see. The skill was invoked and produced nine scenarios in the required three-column table, all `Not run`. It raised the expected-total disagreement as an open question and did not pick a side. It marked the unverified claims as suspected, listed what it cut and which scenarios suit automation, and stated that nothing shown proves the bug is fixed. It wrote no files.
 
-Weak spots seen: one row's traceability said it came from the fix, although the run had not read the fix (the skill asks for such rows to be marked as assumed), and some expected values in the variants were derived by arithmetic from the ticket's rule and not confirmed.
+Weak spots seen: one row's traceability said it came from the fix, although the run had not read the fix, and some expected values in the variants were derived by arithmetic from the ticket's rule and not confirmed.
+
+After the trial the skill was tightened for both: rows resting on an unread fix must be named `Neighbour (assumed):`, traceability may not cite a source that was not read, and derived expected values must be labelled derived and listed as open questions. That change has not been re-run, so it is untested.
 
 Not exercised by that trial: reading a real fix or pull request, running the scenarios, a real tracker, and a bug with screenshots or logs.
