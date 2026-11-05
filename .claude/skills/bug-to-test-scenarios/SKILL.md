@@ -18,7 +18,7 @@ Turns one bug report into test scenarios a tester can run. The goal is to prove 
 1. **Read everything.** Description, steps to reproduce, expected and actual behaviour, environment, severity, every comment, and the linked fix. Later comments often change the diagnosis or the expected behaviour. Note anything that contradicts the description.
 2. **State the bug in one line**: what a user does, what they get, and what they should get. If you cannot, that is an open question, not something to guess.
 3. **Find the trigger conditions.** Which data, role, state, timing, browser or entry point is needed to hit the bug? Which of these were stated, and which are only suspected? Say so.
-4. **List gaps instead of guessing.** Missing steps, unclear expected behaviour, "sometimes" or "intermittent" with no pattern, no environment, no fix to read. Write each as an open question with who might know.
+4. **List gaps instead of guessing.** Missing steps, unclear expected behaviour, "sometimes" or "intermittent" with no pattern, no environment, no fix to read. Write each as an open question with who might know. Also raise as an open question any inconsistency you notice, such as numbers that do not match the stated cause (for example a reported total that the diagnosis would not produce), or two comments that disagree. Do not just note it in a table cell or explain it away.
 5. **Derive scenarios** in the groups below, then trim to a short, high-impact set. State what you cut and why.
 6. **Show the table and wait for a review** before anyone treats it as final.
 7. **Record results only for scenarios that were run** (see Results).

@@ -37,4 +37,6 @@ That gap was then closed in the skill: whenever there are derived values, the op
 
 Small differences in that run, for honesty: it noticed that 16.00 does not match "10% applied twice" (16.20) and put it in the table and the derived-values list, but did not raise it as an open question for the dev, which the previous run did. It also labelled "SAVE10 alone = 18.00" as a stated rule, not a derived value, which is arguable. This is one run, and runs vary, so treat it as encouraging and not proven.
 
+To address the missed question, the skill now says that any inconsistency noticed (numbers that do not match the stated cause, or two comments that disagree) must be raised as an open question, not only noted in a table cell. That change has not been re-run, so it is untested.
+
 Not exercised by that trial: reading a real fix or pull request, running the scenarios, a real tracker, and a bug with screenshots or logs.
